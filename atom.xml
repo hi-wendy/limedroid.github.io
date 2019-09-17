@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>时光轻缓，薇风刚好</title>
+  <icon>https://www.gravatar.com/avatar/7bfda21fef8527e60cea153f869a4b80</icon>
+  <subtitle>Wendy</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://hiwendy.cn/"/>
+  <updated>2019-09-17T06:59:19.240Z</updated>
+  <id>http://hiwendy.cn/</id>
+  
+  <author>
+    <name>Wendy</name>
+    <email>807595678@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git学习之putty密钥文件的生成</title>
+    <link href="http://hiwendy.cn//posts/19c65da8/"/>
+    <id>http://hiwendy.cn//posts/19c65da8/</id>
+    <published>2019-09-17T06:59:19.240Z</published>
+    <updated>2019-09-17T06:59:19.240Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="软件："><a href="#软件：" class="headerlink" title="软件："></a>软件：</h3><p><a href="http://tortoisegit.org/download/" target="_blank" rel="noopener">TortoiseGit</a>  or <a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a> </p><h3 id="如何生成Putty的ppk文件："><a href="#如何生成Putty的ppk文件：" class="headerlink" title="如何生成Putty的ppk文件："></a>如何生成Putty的ppk文件：</h3><h4 id="在Git-Bash中输入命令"><a href="#在Git-Bash中输入命令" class="headerlink" title="在Git Bash中输入命令"></a>在Git Bash中输入命令</h4><p>生成 sshkey（记住生成的key的位置）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"xxx@xxx.com"</span></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br></pre></td></tr></table></figure><p>查看及添加key（以码云为例，码云SSH key添加地址:<a href="https://gitee.com/profile/sshkeys）" target="_blank" rel="noopener">https://gitee.com/profile/sshkeys）</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br></pre></td></tr></table></figure><h4 id="PPK文件"><a href="#PPK文件" class="headerlink" title="PPK文件"></a>PPK文件</h4><p>下载putty程序或者puttygen单独程序<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank" rel="noopener">下载地址</a></p><p>运行puttygen</p><p>点击Conversions菜单项中的Import key</p><p>选择刚才生成的sshkey的id_rsa文件</p><p>在puttygen的界面上点击Save private key按钮就可以把私钥转换为ppk的格式了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;软件：&quot;&gt;&lt;a href=&quot;#软件：&quot; class=&quot;headerlink&quot; title=&quot;软件：&quot;&gt;&lt;/a&gt;软件：&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://tortoisegit.org/download/&quot; target=&quot;_blank&quot; rel=&quot;no
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://hiwendy.cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="git" scheme="http://hiwendy.cn/tags/git/"/>
+    
+  </entry>
+  
+</feed>
