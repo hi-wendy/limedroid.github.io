@@ -6,13 +6,13 @@
     
     
     
-    <title>时光轻缓，薇风刚好 | Wendy</title>
+    <title>vue-cli初识 | 时光轻缓，薇风刚好 | Wendy</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="个人博客">
+    <meta name="keywords" content="vue,vue-cli">
     
     
 <!-- Google Analytics -->
@@ -57,16 +57,27 @@ ga('send', 'pageview');
 
 
     
-    <meta name="description" content="Wendy的个人博客">
-<meta name="keywords" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="时光轻缓，薇风刚好">
-<meta property="og:url" content="http://hiwendy.cn/index.html">
+    <meta name="description" content="安装Node 版本要求 Vue CLI 需要 Node.js 8.9 或更高版本 (推荐 8.11.0+)。你可以使用 nvm 或 nvm-windows 在同一台电脑中管理多个 Node 版本。 你需要全局安装vue-cli工具： 123npm install -g @vue/cli# ORyarn global add @vue/cli 使用这个命令查看是否安装成功： 1vue --versi">
+<meta name="keywords" content="vue,vue-cli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli初识">
+<meta property="og:url" content="http://hiwendy.cn/posts/cca8efb6/index.html">
 <meta property="og:site_name" content="时光轻缓，薇风刚好">
-<meta property="og:description" content="Wendy的个人博客">
+<meta property="og:description" content="安装Node 版本要求 Vue CLI 需要 Node.js 8.9 或更高版本 (推荐 8.11.0+)。你可以使用 nvm 或 nvm-windows 在同一台电脑中管理多个 Node 版本。 你需要全局安装vue-cli工具： 123npm install -g @vue/cli# ORyarn global add @vue/cli 使用这个命令查看是否安装成功： 1vue --versi">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568774135787.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568774297288.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568776286076.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568784837710.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568785197262.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568785298388.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568785683096.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568786011998.png">
+<meta property="og:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568788893058.png">
+<meta property="og:updated_time" content="2019-09-18T06:55:58.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光轻缓，薇风刚好">
-<meta name="twitter:description" content="Wendy的个人博客">
+<meta name="twitter:title" content="vue-cli初识">
+<meta name="twitter:description" content="安装Node 版本要求 Vue CLI 需要 Node.js 8.9 或更高版本 (推荐 8.11.0+)。你可以使用 nvm 或 nvm-windows 在同一台电脑中管理多个 Node 版本。 你需要全局安装vue-cli工具： 123npm install -g @vue/cli# ORyarn global add @vue/cli 使用这个命令查看是否安装成功： 1vue --versi">
+<meta name="twitter:image" content="c:/Users/wendi_tang/AppData/Roaming/Typora/typora-user-images/1568774135787.png">
     
         <link rel="alternate" type="application/atom+xml" title="时光轻缓，薇风刚好" href="/limedroid.github.io/atom.xml">
     
@@ -81,7 +92,7 @@ ga('send', 'pageview');
 
 <body>
     <div id="loading" class="active"></div>
-    <aside id="menu"   >
+    <aside id="menu"  class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -102,7 +113,7 @@ ga('send', 'pageview');
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/limedroid.github.io/"  >
                     <i class="icon icon-lg icon-home"></i>
                     <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
@@ -168,7 +179,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">时光轻缓，薇风刚好</div>
+        <div class="flex-col header-title ellipsis">vue-cli初识</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -185,19 +196,16 @@ ga('send', 'pageview');
         </a>
     </div>
 </header>
-<header class="content-header index-header">
+<header class="content-header post-header">
     
     
     <div class="container fade-scale">
         <div id="myheader">
             <h1 class="title">
-                 
-                    时光轻缓，薇风刚好
                 
             </h1>
             <h5 class="subtitle">
                 
-                    彼时当年少，莫负好时光
                 
             </h5>
         </div>
@@ -205,34 +213,46 @@ ga('send', 'pageview');
 
 </header>
 
+
 <div class="container body-wrap">
-    <ul class="post-list">
     
-        <li class="post-list-item fade">
-            <article id="post-vue-cli初识"
-  class="article-card article-type-post" itemprop="blogPost">
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建一个项目"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建一个项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动"><span class="post-toc-number">3.</span> <span class="post-toc-text">启动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#远程仓库关联介绍"><span class="post-toc-number">4.</span> <span class="post-toc-text">远程仓库关联介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建新的远程仓库"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">创建新的远程仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将vue-cli项目和git远程仓库关联"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">将vue-cli项目和git远程仓库关联</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue-cli目录介绍"><span class="post-toc-number">5.</span> <span class="post-toc-text">vue-cli目录介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始开发"><span class="post-toc-number">6.</span> <span class="post-toc-text">开始开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#main-js入口文件介绍"><span class="post-toc-number">6.0.1.</span> <span class="post-toc-text">main.js入口文件介绍</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态资源引入方式介绍"><span class="post-toc-number">6.0.2.</span> <span class="post-toc-text">静态资源引入方式介绍</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#App-vue"><span class="post-toc-number">6.0.3.</span> <span class="post-toc-text">App.vue</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-vue-cli初识"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
-    
+    <div class="post-card">
+        <h1 class="post-card-title">vue-cli初识</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2019-09-18 10:08:07" datetime="2019-09-18T02:08:07.421Z"  itemprop="datePublished">2019-09-18</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/limedroid.github.io/categories/学习笔记/">学习笔记</a></li></ul>
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/limedroid.github.io/posts/cca8efb6/">vue-cli初识</a>
-    </h3>
-  
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
 
 
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-09-18 10:08:07" datetime="2019-09-18T02:08:07.421Z"  itemprop="datePublished">2019-09-18</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Node 版本要求</p>
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">6</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Node 版本要求</p>
 <p>Vue CLI 需要 <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> 8.9 或更高版本 (推荐 8.11.0+)。你可以使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> 或 <a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener">nvm-windows</a> 在同一台电脑中管理多个 Node 版本。</p>
 <p>你需要全局安装vue-cli工具：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
@@ -380,80 +400,135 @@ ga('send', 'pageview');
 <p>它就是个组件。你可以抽象的把它认为是一个div，你可以随意的把它放到任意地方。当然放置的方式可能和div放置有点区别。比如App.vue这个组件，是在main.js里引入</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span></span><br></pre></td></tr></table></figure>
 
-    
-        <div>
-            <a href="/limedroid.github.io/posts/cca8efb6/" class="post-more waves-button">
-                Continue reading...
-            </a>
         </div>
-    </div>
-    
-    <div class="post-footer">
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
+<span class="post-time">
+    Last updated: <time datetime="2019-09-18T06:55:58.035Z" itemprop="dateUpdated">2019-09-18 14:55:58</time>
+</span>
+
+
+        
+        原文链接：<a href="/limedroid.github.io/posts/cca8efb6/" target="_blank" rel="external">http://hiwendy.cn/posts/cca8efb6/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://hiwendy.cn'">
+            <img src="/limedroid.github.io/img/avatar.jpg" alt="Wendy">
+            <a>Wendy</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/limedroid.github.io/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/limedroid.github.io/tags/vue-cli/">vue-cli</a></li></ul>
 
-    </div>
-    
-</article>
 
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Git-putty"
-  class="article-card article-type-post" itemprop="blogPost">
-
+            
+<div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hiwendy.cn/posts/cca8efb6/&title=《vue-cli初识》 — 时光轻缓，薇风刚好&pic=http://hiwendy.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hiwendy.cn/posts/cca8efb6/&title=《vue-cli初识》 — 时光轻缓，薇风刚好&source=Wendy的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hiwendy.cn/posts/cca8efb6/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue-cli初识》 — 时光轻缓，薇风刚好&url=http://hiwendy.cn/posts/cca8efb6/&via=http://hiwendy.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hiwendy.cn/posts/cca8efb6/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/limedroid.github.io/posts/19c65da8/">Git学习之putty密钥文件的生成</a>
-    </h3>
-  
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
 
 
 
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-09-17 14:59:19" datetime="2019-09-17T06:59:19.240Z"  itemprop="datePublished">2019-09-17</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h3 id="软件："><a href="#软件：" class="headerlink" title="软件："></a>软件：</h3><p><a href="http://tortoisegit.org/download/" target="_blank" rel="noopener">TortoiseGit</a>  or <a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a> </p>
-<h3 id="如何生成Putty的ppk文件："><a href="#如何生成Putty的ppk文件：" class="headerlink" title="如何生成Putty的ppk文件："></a>如何生成Putty的ppk文件：</h3><h4 id="在Git-Bash中输入命令"><a href="#在Git-Bash中输入命令" class="headerlink" title="在Git Bash中输入命令"></a>在Git Bash中输入命令</h4><p>生成 sshkey（记住生成的key的位置）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"xxx@xxx.com"</span></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br></pre></td></tr></table></figure>
-<p>查看及添加key（以码云为例，码云SSH key添加地址:<a href="https://gitee.com/profile/sshkeys）" target="_blank" rel="noopener">https://gitee.com/profile/sshkeys）</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br></pre></td></tr></table></figure>
-<h4 id="PPK文件"><a href="#PPK文件" class="headerlink" title="PPK文件"></a>PPK文件</h4><p>下载putty程序或者puttygen单独程序<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank" rel="noopener">下载地址</a></p>
-<p>运行puttygen</p>
-<p>点击Conversions菜单项中的Import key</p>
-<p>选择刚才生成的sshkey的id_rsa文件</p>
-<p>在puttygen的界面上点击Save private key按钮就可以把私钥转换为ppk的格式了</p>
-
-    
-        <div>
-            <a href="/limedroid.github.io/posts/19c65da8/" class="post-more waves-button">
-                Continue reading...
-            </a>
         </div>
     </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/limedroid.github.io/tags/git/">git</a></li></ul>
 
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/limedroid.github.io/posts/19c65da8/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Git学习之putty密钥文件的生成">下一篇：Git学习之putty密钥文件的生成</h4>
+      </a>
     </div>
+  
+</nav>
+
+
+
     
+    
+
+    
+<section class="comments" id="comments">
+    <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="/limedroid.github.io/js/md5.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'f1b1e3b55c8ecf7becdf',
+            clientSecret: '96847eb3b0de8417eef8aefb2211a18b2181d859',
+            repo: 'limedroid.github.io',
+            owner: 'hi-wendy',
+            id: md5(location.pathname),
+            admin: ['hi-wendy']
+        });
+        gitalk.render('gitalk-container');
+    </script>
+</section>
+
+
+    
+
+
 </article>
-
-        </li>
-    
-    </ul>
-
-    
 
 </div>
 
@@ -499,8 +574,83 @@ ga('send', 'pageview');
 
     </main>
     
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/limedroid.github.io/img/photo.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/limedroid.github.io/img/wechat.png" data-alipay="/limedroid.github.io/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hiwendy.cn/posts/cca8efb6/&title=《vue-cli初识》 — 时光轻缓，薇风刚好&pic=http://hiwendy.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hiwendy.cn/posts/cca8efb6/&title=《vue-cli初识》 — 时光轻缓，薇风刚好&source=Wendy的个人博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hiwendy.cn/posts/cca8efb6/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue-cli初识》 — 时光轻缓，薇风刚好&url=http://hiwendy.cn/posts/cca8efb6/&via=http://hiwendy.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hiwendy.cn/posts/cca8efb6/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aQY7DIAwF0N7/0h1ptp0w3yZxUumxitIIHl1Yxub1isf7dxy9/xxH3yRznjBwcXG3ue/l+Jw6eU428/mcbB4XF3eSuw5eR4utg9H6m/VWD9/j4uI+jLsVgIpBEBcX91u4eTKUf4OLi/tkbg+Rp0Q7fwcuLu48t1owveL5wvouLi5ukfsujrzwUS2aRKvj4uKOcNctkF5/Mw9SveMQLi7uPDdZeOdQ1MtkcHFx7+X2glGS6CSXMKI3uLi4F3PzZkZvS/kFr2hdXFzcQW6epuw3VnfWxcXFneHuBKOckh+xovYqLi7uCDe/PNELVb0tlbu+uLi4J3GrQSdJQaoJUD4nLi7uDLd3Pau6TK/1gouLexe3mtZUU6UkM8kNuLi4M9w8cdm5XFVNmMoFU1xc3FO5O62RZqEzTn1wcXHv5e6EmGpVs3rqwsXFvYubj+YyxeBVqMrg4uJewK0uv1NUXYfC6q+4uLhXc5PgtROS8oNTlAzh4uIOcs8thuaXvfJmDC4u7jO5O2lQr9X6x5y4uLgP5lZTojw4/hP4cHFxB7nJ8r2rFcnRqPBn4eLijnCrBdP1Mea6NgwuLu4I9weJP91ETgBnbgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
 
 
     <!-- waves按钮特效 -->
@@ -508,7 +658,7 @@ ga('send', 'pageview');
 
 <!-- 主题配置脚本 -->
 <script>
-var BLOG = { ROOT: '/limedroid.github.io/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/limedroid.github.io/', SHARE: true, REWARD: true };
 </script>
 
 <!-- jquery -->
